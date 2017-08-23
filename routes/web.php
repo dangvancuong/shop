@@ -11,9 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 // test thử trang chủ
+//
+Route::get('/','TestController@index');
+Route::get('home','HomeController@index');
+//Route::get('demo','DemoController@index');
 
-//Route::get('test','TestController@index');
+Route::get('login', function() {
+    return view('login');
+});
+/* Route group thực hiện cách lệnh trong group */
+//Route::group(['prefix' => 'login'], function() {
+//
+//    Route::get('/', function(){
+//        return View::make('home');
+//    });
+//});

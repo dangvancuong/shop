@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index(){
-        if (1!=1) return "TestController";
-        else return view('welcome');
-    }
+     function index(){
+         return view('welcome');
+
+     }
 }
