@@ -18,10 +18,12 @@
 //
 Route::get('/','TestController@index');
 Route::get('home','HomeController@index');
+Route::get('admin','AdminPostNew@index');
+
 //Route::get('demo','DemoController@index');
 
-Route::get('login', function() {
-    return view('login');
+Route::get('layout', function() {
+    return view('layout');
 });
 /* Route group thực hiện cách lệnh trong group */
 //Route::group(['prefix' => 'login'], function() {
@@ -30,3 +32,6 @@ Route::get('login', function() {
 //        return View::make('home');
 //    });
 //});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
